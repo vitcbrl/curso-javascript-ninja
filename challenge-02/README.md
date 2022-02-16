@@ -37,20 +37,25 @@ Crie uma função com as seguintes características:
 2. Se qualquer um dos três argumentos não estiverem preenchidos, a função deve retornar a string:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
-*/
-?
+
+function somando(d,e,f){ 
+if( d === undefined || e === undefined || f === undefined){
+return 'preencha todos os dados corretamente'} 
+return (d * e * f) + 2; 
+}
+
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+somando(2,2)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+'preencha todos os dados corretamente'
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+somando(2,2,2)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+10
 
 /*
 Crie uma função com as seguintes características:
@@ -60,9 +65,23 @@ Crie uma função com as seguintes características:
 4. Se todos os argumentos forem passados, retorne a soma do primeiro com o segundo, e o resultado, dividido pelo terceiro.
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
-*/
-?
+
+function pro(x,y,v;){if(x !== undefined && y === undefined && v === undefined){
+return `${x}`;} else if (x !== undefined && y !== undefined && v === undefined){
+return x + y;} else if (x !== undefined && y !== undefined && v !== undefined){
+return (x + y) / 2;} else if (x === undefined && y === undefined && v === undefined){
+return 'false';} else { return 'null';}}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
-```
+ 
+ pro(2)
+ 2
+ 
+ pro(2,2)
+ 4
+ 
+ pro(2,2,2)
+ 2
+ 
+ pro()
+ false
