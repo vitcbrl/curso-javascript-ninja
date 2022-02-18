@@ -62,14 +62,15 @@ quantPessoas:0};
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 
-carro.mudarCor= function(x){
-x !== undefined ? carro.cor= 'mudou' : 'não mudou'};
+carro.mudarCor= function(cor){
+ carro.cor = cor
+};
 
 
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 
 carro.obterCor= function(){
-x === undefined ? carro.cor= 'red' : ' '};
+carro.cor = 'red'};
 
 
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
@@ -88,8 +89,9 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 
-?  não está lendo com ${}
-
+carro.obterMarcaModelo= function(){
+return `${carro.obterMarca()} ${carro.obterModelo}`
+};
 
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
 seguintes características:
@@ -116,22 +118,31 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.cor
+'yellow'
 
 // Mude a cor do carro para vermelho.
-?
+
+carro.mudarCor('red')
 
 // E agora, qual a cor do carro?
-?
-
+ 
+ carro.cor
+ 'red'
+ 
 // Mude a cor do carro para verde musgo.
-?
+
+carro.mudarCor('verde musgo')
 
 // E agora, qual a cor do carro?
-?
+
+carro.cor
+'verde musgo'
 
 // Qual a marca e modelo do carro?
-?
+
+carro.obterMarcaModelo()
+'fiat alto'
 
 // Adicione 2 pessoas no carro.
 ?
