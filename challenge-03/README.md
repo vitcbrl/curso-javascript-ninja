@@ -172,8 +172,17 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+
+pessoa.apresentacao= function() {
+var sexo = pessoa.sexo === 'fem' ? 'a' : 'o' 
+// eu criei essa variavel que vai receber o condicional ternário pois na montagem da frase é necessario. eu vou chamar a variavel 
+var idade = pessoa.idade === 1 ? 'ano' : 'anos'
+var metros =  pessoa.caminhouquantosmetros === 1 ? 'metro' : 'metros'
+return `Olá, eu sou ${sexo} ${pessoa.nome} ${pessoa.sobrenome}, tenho ${pessoa.idade} ${idade}, ${pessoa.altura}, meu peso é ${pessoa.peso} e, só hoje, eu já caminhei ${pessoa.caminhouquantosmetros} ${metros}!`
+};
 
 // Agora, apresente-se ;)
-?
-```
+
+"Olá, eu sou a Vitória Cabral, tenho 23 anos, 1.60, meu peso é 80 e, só hoje, eu já caminhei 2 metros!"
+
+
